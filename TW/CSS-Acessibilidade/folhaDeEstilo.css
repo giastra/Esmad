@@ -1,3 +1,12 @@
-body {background-color: rgb(243, 237, 164);}
+/*Corpo*/
+body {background-color: rgb(171, 223, 236);}
+/*Titulo*/
 h1{font-size: 40px;}
+/*Legenda*/
 #T2 {font-size: 25px;}
+/*lista*/
+li{font-size: 20px; text-decoration:underline;}
+/*tipos da tabela*/
+#cabeca{font-size: 30px;background-color: rgb(3, 4, 70);color:aliceblue;}
+/*conteuda da tabela*/
+.resto{font-size: 25px;background-color: rgb(5, 59, 43);color: rgb(245, 248, 255);text-align:center}
