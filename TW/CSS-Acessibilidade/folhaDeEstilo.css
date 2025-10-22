@@ -1,11 +1,12 @@
-/*Corpo*/
+/*fundo*/
 body {background-color: rgb(171, 223, 236);}
 /*Titulo*/
 h1{font-size: 40px;}
-/*Legenda*/
+h1::first-letter{font-size: 60px;}
+/*descrição do site*/
 #T2 {font-size: 25px;}
-/*lista*/
-li{font-size: 20px; text-decoration:underline;}
+/*nome dos pratos*/
+.prato{font-size: 20px; text-decoration:underline; color:rgb(0, 31, 0)}
 /*tipos da tabela*/
 #cabeca{font-size: 30px;background-color: rgb(3, 4, 70);color:aliceblue;}
 /*conteuda da tabela*/
