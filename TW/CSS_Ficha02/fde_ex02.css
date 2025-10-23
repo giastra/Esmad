@@ -5,21 +5,27 @@ nav{
     position: fixed; 
     width:  100%;
     top: 0%;
-    height: 9%;
+    height: 6%;
     }
-main{ 
+
+main{ font-family:'Courier New', Courier, monospace;
     }
 
 #projeto1{background-color: aqua;
-    display: flex;
+    display: block;
     justify-self: center;
-    justify-items: center;
     width: 80%;
-    height: 80%;
-
+    height: 100%;
+    border-radius: 5px;
     }
 
-
+#projeto2{background-color: rgb(0, 255, 42);
+    display: block;
+    justify-self: center;
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    }
 
 /*o butao de subimeter*/
 #butao{
@@ -29,12 +35,10 @@ main{
     border-radius: 10px;
     background-color: aqua; 
     color: #000000;
-    
     }
 
     /*como a borda e a area de contato se comportam*/
 fieldset{
-    
     border: 2px #000000;
     padding: 1%;
     border-radius: 10px;
@@ -46,20 +50,25 @@ fieldset{
     }
 
     /*caixa de texto da mensagem hipotetica na area de contato*/
-.formulario{width: 100%
+.formulario{width: 95%
             ;height: 10%}
 
 .links{
-    
     font-size: 120%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:space-around ;
     align-self: center;
-
 }
 
 a:link{color: rgb(66, 7, 122);}
 a:visited{color: rgb(26, 52, 0);}
 a:hover{color: rgb(238, 106, 11);}
+
+#contacto{font-size: 25px;}
+
+#meusprojetos{
+    font-family:'Courier New', Courier, monospace;
+
+}
