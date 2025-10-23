@@ -1,14 +1,16 @@
-body{margin:0% ;}
+body{margin:0% ;margin-top: 6.5%;font-family:'Courier New', Courier, monospace;background-color: rgb(245, 243, 240);}
 
 nav{
-    background-color: aqua; 
+    background-color: rgb(0, 18, 67); 
     position: fixed; 
     width:  100%;
     top: 0%;
-    height: 6%;
+    height: 8%;
+    font-size: 121%;
     }
 
-main{ font-family:'Courier New', Courier, monospace;
+main{ 
+    margin-left: 5%;
     }
 
 #projeto1{background-color: aqua;
@@ -23,7 +25,7 @@ main{ font-family:'Courier New', Courier, monospace;
     display: block;
     justify-self: center;
     width: 80%;
-    height: 100%;
+    height: 10%;
     border-radius: 5px;
     }
 
@@ -33,7 +35,7 @@ main{ font-family:'Courier New', Courier, monospace;
     border: 5% solid;
     padding: 1%;
     border-radius: 10px;
-    background-color: aqua; 
+    background-color: rgb(99, 255, 255); 
     color: #000000;
     }
 
@@ -62,13 +64,13 @@ fieldset{
     align-self: center;
 }
 
-a:link{color: rgb(66, 7, 122);}
-a:visited{color: rgb(26, 52, 0);}
-a:hover{color: rgb(238, 106, 11);}
+a:link{color: rgb(255, 12, 12);}
+a:visited{color: rgb(128, 255, 0);}
+a:hover{color: rgb(255, 106, 0);}
 
 #contacto{font-size: 25px;}
 
-#meusprojetos{
-    font-family:'Courier New', Courier, monospace;
+#inicio{margin-left: 3%;color:rgb(45, 75, 77);}
 
-}
+h2{color: chocolate;}
+h3{color:rgb(80, 58, 4);}
