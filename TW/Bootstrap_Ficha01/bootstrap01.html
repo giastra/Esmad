@@ -1,12 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="vh-100">
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      
+      <!-- Coluna Esquerda -->
+      <div class="col-md-6 d-flex flex-column p-5 bg-info">
+        <h1>Bem-vindo website</h1>
+        <p>
+          A magia é uma força poderosa e muito presente 
+em Arton. No entanto, itens mágicos são raros. Os 
+heróis artonianos confiam mais nas próprias capaci
+dades do que em objetos para garantir sua vitória.
+ Por outro lado, itens mágicos são especiais. Uma 
+espada mágica não será apenas uma ferramenta, 
+usada e descartada assim que surgir algo melhor. 
+Um guerreiro precisará lutar muito por sua arma 
+encantada — e, quando encontrá-la, descobrirá que é 
+única, especial e poderosa.
+ Itens mágicos são uma forma marcante de 
+recompensa. Tente pensar em pelo menos um 
+item para cada personagem no grupo, um objeto 
+único ligado a sua personalidade, estilo e táticas, e 
+conceda-os apenas em momentos singulares, após 
+bastante esforço.
+ Itens mágicos são divididos em uso único (poções 
+e pergaminhos) e permanentes (armas, armaduras/
+ escudos e acessórios). Itens mágicos permanentes 
+ainda são divididos em itens menores, médios e maiores.
+        </p>
+      </div>
+
+      <!-- Coluna Direita -->
+      <div class="col-md-6 d-flex flex-column  p-5">
+        <h2>Login</h2>
+        <form class="w-100">
+          <div class="mb-3">
+            Username
+            <input type="text" class="form-control" >
+          </div>
+          <div class="mb-3">
+            Password
+            <input type="password" class="form-control" >
+          </div>
+          <button type="submit" class="btn btn-primary me-2">Login</button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Registar</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal de Registo -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <!-- cabeca -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Criar conta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <!-- formulario -->
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              Nome
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              Username
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              Password
+              <input type="password" class="form-control">
+            </div>
+            <div class="mb-3">
+              Tipo de Subscrição
+              <select class="form-select">
+                <option>Basico $</option>
+                <option>Basico+ $$</option>
+                <option>Basico++ $$$</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              Género<br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" >
+                Feminino
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="masculino" value="Masculino">
+                <label class="form-check-label" for="masculino">Masculino</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="outro" value="Outro">
+                <label class="form-check-label" for="outro">Outro</label>
+              </div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="termos">
+                Ao continuar estará a aceitar os termos e condições
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Criar conta</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
