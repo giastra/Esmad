@@ -61,5 +61,6 @@ switch (escolha){
         alert(numero1+' / '+numero2+' = '+resultado)
 } 
 
+// para puxar de uma lista e´igual pyton
 
-
+(`sdsdsd ${dfdf}`)  
