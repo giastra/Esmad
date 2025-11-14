@@ -43,6 +43,7 @@ function ordNom(){
     let nome1 = prompt('Idroduza um nome ')
     let nome2= prompt('Introduza outro nome ')
     let nome3 = prompt('Introduza oultro nome ')
-    let arr = (nome1,nome2,nome3)
-    alert()
+    let arr = [nome1,nome2,nome3]
+    arr.sort()
+    alert('nomes em ordem alfabetica: '+arr[0]+', '+arr[1]+' e '+arr[2])
 }
