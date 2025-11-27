@@ -1,34 +1,41 @@
-//Turns on and off a LED ,when pressings button attach to pin12
-/**********************************/
-const int keyPin = 12; //the number of the key pin
-const int ledPin = 11;
-const int ledPPin = 9;
-const int ledPPPin = 6;
-/**********************************/
-void setup()
-{
-  pinMode(keyPin,INPUT);//initialize the key pin as input
-  pinMode(ledPin,OUTPUT);//initialize the led pin as output
-  pinMode(ledPPin,OUTPUT);
-  pinMode(ledPPPin,OUTPUT);
+#define echoPin 7 // Echo Pin 
+#define trigPin 8 // Trigger Pin 
+#define LEDPin 13 // Onboard LED 
+int maximumRange = 200; // Maximum range needed 
+int minimumRange = 0; // Minimum range needed 
+long duration, distance; // Duration used to calculate distance
+
+void setuo() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(LEDPin, OUTPUT);  // Use LED indicator (if required)
 }
-/**********************************/
-void loop()
-{
-  //read the state of the key value
-  //and check if the kye is pressed
-  //if it is,the state is HIGH
-  if(digitalRead(keyPin) ==HIGH )
-  {
-    digitalWrite(ledPin,HIGH);//turn on the led
-    digitalWrite(ledPPin,HIGH);//turn on the led
-    digitalWrite(ledPPPin,HIGH);//turn on the led
+
+void loop() {
+  /* The following trigPin/echoPin cycle is used to determine the distance of the nearest object by bouncing soundwaves off of it. */
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+
+  //Calculate the distance (in cm) based on the speed of sound.
+  distance = duration / 58.2;
+
+  if (distance >= maximumRange || distance <= minimumRange) {
+    /* Send a negative number to computer and Turn LED ON to indicate "out of range" */
+    Serial.println("-1");
+    digitalWrite(LEDPin, HIGH);
+  } else {
+    /* Send the distance to the computer using Serial protocol, and turn LED OFF to indicate successful reading. */
+    Serial.println(distance);
+    digitalWrite(LEDPin, LOW);
   }
-  else
-  {
-    digitalWrite(ledPin,LOW);//turn off the led
-    digitalWrite(ledPPin,LOW);//turn on the led
-    digitalWrite(ledPPPin,LOW);//turn on the led
-  }
+
+  //Delay 50ms before next reading.
+  delay(50);
 }
-/************************************/

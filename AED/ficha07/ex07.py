@@ -1,17 +1,20 @@
+import os
 def AddContry(fileName):
+    os.system('cls')
     with open(fileName, 'r+' , encoding='utf-8') as file:
         pais = str(input('Introduza um país '))
         continente= str(input('Introduza o continente desse país '))
         lista=file.read()
         lista=lista.split(',')
-        print(lista)
         if lista.count(pais)==0:
             file.write(pais.capitalize()+','+continente.capitalize()+',')
+            print('\npaís adicionado')
         else:
             print('Esse pais já existe na lista')
     file.close()
 
 def showCountries(fileName):
+    os.system('cls')
     with open(fileName , 'r', encoding='utf-8') as file:    
         lista=file.read()
         lista=lista.split(',')
@@ -21,10 +24,18 @@ def showCountries(fileName):
             print('\n\t',lista[x],end=' ')
         else:
             print(lista[x])
-        
+            n+=1
+        if n == 10:
+            lod=input('proxima pagiana . ')
+            if lod == '.':
+                n=0
+                os.system('cls')
+
+
+
 pasta = 'files'
 fichero = 'países.txt'
-    
+os.system('cls')    
 while True:
     print('MENU\n1-\n2-\n3-\n4-\n0-')
     intro = int(input('\topção: '))
@@ -35,4 +46,6 @@ while True:
     elif intro == 0:
         break
     else:
-        print('\nOpção não valida, tente novamente')   
+        print('\nOpção não valida, tente novamente')  
+
+
