@@ -54,7 +54,5 @@ with open(fileName,newline='', encoding='utf-8') as file:
             marker='p',
             ms=5,
             mfc='blue')
-    legenda=('Media','Minimo','Maximo')
-    plt.legend(legenda,loc='upper rigth')
     plt.show()
 
