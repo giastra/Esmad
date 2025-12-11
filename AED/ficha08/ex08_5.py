@@ -22,7 +22,7 @@ for linha in listaAA:
         elif linha['fuelType'] == 'Hybrid':
             dinH+=dinheiro
 print('Disel',dinD,' Hidrido',dinH,' petrolho',dinP)
-font1={'family':'serif','color':'blue','size':18}
+font1={'family':'serif','color':'blue','size':12}
 plt.title(f'Quantidade vendida por tipo de combustivel da {marca}',fontdict=font1,loc='center')
 plt.xlabel('Tipo de combustivel')
 plt.ylabel('Quantidade de venda')
