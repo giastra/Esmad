@@ -1,0 +1,35 @@
+body {
+    background-color: #e9c163;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px;
+}
+
+#formSection {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+ul {
+    box-shadow: 0px 10px 5px 7px #00000027;
+    background-color: #dfb657;
+
+    padding: 10px;
+}
+
+input {
+    margin-right: 5px;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px;
+}
