@@ -34,7 +34,7 @@
                     <option value="work">Work</option>
                 </select>
                 
-                <!-- Butão -->
+                <!-- Botão -->
                 <input type="submit" id="buton" class="btn btn-secondary" value="Add"/>  
             </form>
         </section>
@@ -47,6 +47,23 @@
 
             </ul>
         </section>
+
+    <!-- formulario de confirmação -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <p class="modal-title" id="registerModalLabel">Marking this task as complete will result in its removal. Do you wish to proceed?</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Cancelar</button>
+           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal" onclick="sim(true)">OK</button>
+        </div>
+      </div>
+    </div>
+    </div>
     </main>
 
     <script src="script.js"></script>
