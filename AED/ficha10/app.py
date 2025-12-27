@@ -1,4 +1,4 @@
-# flask microflameworks necessita de ausiliares para um site completo,
+# flask microframeworks necessita de auxiliares para um site completo,
 # para algoritimos
 # exemplo de site usando 
 from flask import Flask, render_template
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def inicio():
-    return render_template('lolde.html')
+    return render_template("index.html")
 
 @app.route('/blog')
 def blog():
