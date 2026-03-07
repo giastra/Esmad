@@ -9,3 +9,5 @@ CTRL + ~
 
 para instalar extenções do py
 py -m pip install 
+
++ antes do prompit em js converte string em numerico
