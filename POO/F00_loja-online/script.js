@@ -150,3 +150,8 @@ butao.addEventListener("click",function(){
         
     }
 })
+
+// arow function:
+// let var = variavel => {return variavel}
+// var(variavel)
+// evitar botar funções muito variaveis
