@@ -121,4 +121,31 @@ for (info in track){
     }
 }
 
-//terminei na 10
+//----------------
+const catalogue=[
+    {
+    title:"Stranger in a Stranger Land",
+    artist:"Iron Mainden",
+    duration:347,
+    genre:"Metal",
+    plays:14647895,
+    liked:false,
+    },
+    {
+    title:"Never Fade Away",
+    artist:"SAMURAI",
+    duration:347,
+    genre:"Punk Rock",
+    plays:14647895,
+    liked:false,
+    },
+    {
+    title:"Stranger in a Stranger Land",
+    artist:"Iron Mainden",
+    duration:347,
+    genre:"Metal",
+    plays:14647895,
+    liked:false,
+    },
+
+]
