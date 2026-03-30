@@ -89,6 +89,6 @@ document.getElementById('track-list').addEventListener('click',function(){
         }
     })
 
-document.getElementById('add-track-from').addEventListener('submit', function(){
-    event.preventDefault()
-})
+// document.getElementById('add-track-from').addEventListener('submit', function(){
+//     event.preventDefault()
+// })
