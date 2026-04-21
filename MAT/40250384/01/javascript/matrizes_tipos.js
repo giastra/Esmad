@@ -1,49 +1,5 @@
 // import * as math from "mathjs";
 
-const zero = math.zeros(3, 4);
-const identity = math.identity(4);
-const diagonal = math.diag([2, 5, -1]);
-const upper = math.matrix([
-  [1, 2, 3],
-  [0, 4, 5],
-  [0, 0, 6],
-]);
-const lower = math.matrix([
-  [7, 0, 0],
-  [8, 9, 0],
-  [1, 2, 3],
-]);
-const M = math.matrix([
-  [1, 2, -1],
-  [0, 3, 4],
-  [2, 1, 0],
-]);
-const symmetric = math.add(M, math.transpose(M));
-
-function shape(A) {
-  const size = math.size(A).valueOf();
-  return `${size[0]}x${size[1]}`;
-}
-
-console.log("Zero", shape(zero), zero.valueOf());
-console.log("Identity", shape(identity), identity.valueOf());
-console.log("Diagonal", shape(diagonal), diagonal.valueOf());
-console.log("Upper", shape(upper), upper.valueOf());
-console.log("Lower", shape(lower), lower.valueOf());
-console.log("Symmetric", shape(symmetric), symmetric.valueOf());
-
-try {
-  math.add(math.zeros(2, 3), math.zeros(4, 2));
-} catch (err) {
-  console.log("Add error (expected)", err.message);
-}
-
-try {
-  math.multiply(math.zeros(2, 3), math.zeros(4, 2));
-} catch (err) {
-  console.log("Multiply error (expected)", err.message);
-}
-
 const m3x4zero = math.zeros(3,4)
 const Z = m3x4zero.get([1,2])
 console.log("3x4 zero",Z,m3x4zero.valueOf());
@@ -99,6 +55,13 @@ const matriz = math.matrix([
 const msimetrico = math.add(matriz, math.transpose(matriz))
  const S = msimetrico.get([1,2])
 console.log("3x3 simetrico",S,msimetrico.valueOf());
+
+
+function shape(A) {
+  const size = math.size(A).valueOf();
+  return `${size[0]}x${size[1]}`;
+}
+
 
 function triangular(m) {
     // tamanho da matriz á ser classificada
@@ -173,6 +136,21 @@ function classificar_matriz(m) {
      if (diagonal){
      classificar.push('diagonal')}
       
+//  simetrica
+    let simetrica =true
+    for (let mm = 1; mm < linha; mm++) {
+      for (let nn = 0; nn <coluna; nn++) {
+        if (nn != mm){
+          let x = m.get([mm,nn])
+          let y = m.get([nn,mm])
+          if (x != y){
+            simetrica = false
+          }
+        }
+      }
+    }
+    if (simetrica){classificar.push('symmetric')}
+
 //  triangular
      let triSUP = triangular(m)
      if (triSUP){
@@ -182,6 +160,8 @@ function classificar_matriz(m) {
      let triINF = triangular(math.transpose(m))
      if (triINF){
      classificar.push('lower_triangular')}
+
+    
   } 
 
   // retangula
@@ -200,6 +180,7 @@ function classificar_matriz(m) {
   return classificar
 }
 
+
 console.log('zero ',classificar_matriz(m3x4zero));
 console.log('identidade ',classificar_matriz(m4x4identity));
 console.log('diagonal ',classificar_matriz(m3x3diagonal));
@@ -208,5 +189,16 @@ console.log('triangular INF ',classificar_matriz(m3x3triINF));
 console.log('matriz aleatoria ',classificar_matriz(matriz));
 console.log('matriz simetrica ',classificar_matriz(msimetrico));
 
+try {
+  math.add(math.zeros(2, 3), math.zeros(4, 2));
+} catch (err) {
+  console.log("Add error (expected)", err.message);
+}
+
+try {
+  math.multiply(math.zeros(2, 3), math.zeros(4, 2));
+} catch (err) {
+  console.log("Multiply error (expected)", err.message);
+}
 
 
