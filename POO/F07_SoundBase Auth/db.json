@@ -1,0 +1,18 @@
+{
+    "users":[
+        {
+            "email":"email@gmail.com",
+            "password":"123",
+            "role":"adm"
+    }
+    ],
+    "tracks":[
+        { 
+            "id":0,
+            "title": "Redbone",           
+            "artist": "Childish Gambino", 
+            "duration": 326, 
+            "genre": "R&B",        
+            "plays": 4900  }
+    ]
+}
